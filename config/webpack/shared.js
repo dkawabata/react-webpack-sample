@@ -33,6 +33,9 @@ module.exports = {
 
   module: {
     rules: sync(join(loadersDir, '*.js')).map(loader => require(loader))
+    loaders: [
+      { test: /\.tsx?$/, loader: 'ts-loader' }
+    ]
   },
 
   plugins: [
